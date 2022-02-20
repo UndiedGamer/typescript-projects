@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "setup-npm": "node --experimental-json-modules scripts/npm.mjs",
     "build": "tsup",
     "watch": "tsup --watch"
   },

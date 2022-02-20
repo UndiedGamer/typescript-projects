@@ -1,5 +1,5 @@
 import { rm, writeFile } from 'node:fs/promises';
-import pkg from '../package.json';
+import pkg from '../package.json' assert { type: 'json' };
 
 await writeFile(
 	'tsup.config.ts',
