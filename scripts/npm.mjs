@@ -1,4 +1,5 @@
-import { appendFile, writeFile } from 'fs/promises';
+import { rm, writeFile } from 'node:fs/promises';
+import { join } from 'node:path/posix';
 import pkg from '../package.json';
 
 await writeFile(
@@ -42,4 +43,4 @@ const pkg2 = {
 	...rest
 };
 await writeFile('package.json', JSON.stringify(pkg2, null, 2));
-await appendFile('.npmignore', 'src\nnode_modules\n.yarn\n.*\ntsconfig.*\nyarn.lock\n*.ts');
+await writeFile('.npmignore', 'src\nnode_modules\n.yarn\n.*\ntsconfig.*\nyarn.lock\n*.ts');
