@@ -1,5 +1,4 @@
 import { rm, writeFile } from 'node:fs/promises';
-import { join } from 'node:path/posix';
 import pkg from '../package.json';
 
 await writeFile(
@@ -8,7 +7,7 @@ await writeFile(
 
 export default defineConfig({
 	clean: true,
-	dts: false,
+	dts: true,
 	entry: ['src/**/*.ts', '!src/**/*.d.ts'],
 	format: ['esm', 'cjs'],
 	minify: false,
@@ -30,6 +29,8 @@ pkg.exports = {
 	import: `./${pkg.module}`,
 	require: `./${pkg.main}`
 };
+pkg.scripts.prepublish = 'yarn build';
+
 const { name, version, description, main, module, types, exports, ...rest } = pkg;
 
 const pkg2 = {
@@ -44,3 +45,4 @@ const pkg2 = {
 };
 await writeFile('package.json', JSON.stringify(pkg2, null, 2));
 await writeFile('.npmignore', 'src\nnode_modules\n.yarn\n.*\ntsconfig.*\nyarn.lock\n*.ts');
+await rm('scripts', { recursive: true, force: true });
