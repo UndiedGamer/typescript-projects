@@ -109,12 +109,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/prettier-config@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@sapphire/prettier-config@npm:1.3.0"
+"@sapphire/prettier-config@npm:1.4.4":
+  version: 1.4.4
+  resolution: "@sapphire/prettier-config@npm:1.4.4"
   dependencies:
-    prettier: ^2.5.1
-  checksum: fd620bea745d732733fc73cec365be8c059f2ca725cc17a90ad690fb7a75807b87764de8ac222d308f7d0d3b2c2a6d06c45295c590577d52c29d333389df7c88
+    prettier: ^2.7.1
+  checksum: bf0f37de120b72b054da8b90ddf08c23210c8b01e42f66c4a6833d55ac78c02e3df7f9af6d35f2574e9c9f5c8b131625730a60bcac055b211789b52101a8921e
   languageName: node
   linkType: hard
 
@@ -1928,6 +1928,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^2.7.1":
+  version: 2.7.1
+  resolution: "prettier@npm:2.7.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
+  languageName: node
+  linkType: hard
+
 "promise-inflight@npm:^1.0.1":
   version: 1.0.1
   resolution: "promise-inflight@npm:1.0.1"
@@ -2363,7 +2372,7 @@ __metadata:
   resolution: "typescript-template@workspace:."
   dependencies:
     "@sapphire/eslint-config": ^4.2.1
-    "@sapphire/prettier-config": ^1.3.0
+    "@sapphire/prettier-config": 1.4.4
     "@sapphire/ts-config": ^3.3.1
     "@types/node": ^17.0.18
     eslint: ^8.9.0
