@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "yarn@3.8.6",
   "prettier": "@sapphire/prettier-config",
   "devDependencies": {
     "@sapphire/eslint-config": "^4.2.1",
